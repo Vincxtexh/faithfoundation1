@@ -1,0 +1,49 @@
+Activate Virtual Envoirnment before starting project: env/scripts/activate
+
+temp_superuser: id = faith pass = faith
+
+github: 
+
+faithfoundation.git@gmail.com
+7nnks668fvdhi8d
+
+database:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'faithfoundation',
+        'USER': 'faithfoundationt',
+        'PASSWORD': '_G.B49s8AmkMps.',
+        'HOST': 'db4free.net',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'MXnMKpFMzK2HURLejI5D',
+        'HOST': 'containers-us-west-173.railway.app',   # Or an IP Address that your DB is hosted on
+        'PORT': '8069',
+    }
+}
+
+
+
+LOCALHOST
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_db',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
+
+https://www.facebook.com/profile.php?id=100064406813387&sk=photos_albums

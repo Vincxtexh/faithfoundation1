@@ -1,0 +1,842 @@
+{% extends "base.html" %}
+{% block title %}Faith Foundation{% endblock title %}
+{% block content %}
+    {% comment %} <link rel="stylesheet" href="../pagehandling/assets/css/style.css" /> {% endcomment %}
+    <style>
+        .site-logo{
+            margin-left: -9rem;
+        }
+
+    .site-btn {
+        margin-left: 28px;
+        padding: 25px 29px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        border: none;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 2px;
+        background: #dd3e3e;
+        letter-spacing: 1px;
+        text-align: center;
+        height: 38px;
+        /* padding-bottom: 32px; */
+    }
+
+    .site-btn.sb-light-line {
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        /* letter-spacing: 2px; */
+        /* padding: 22px; */
+        padding: 6px;
+        /* margin-top: 20px; */
+        float: right;
+        margin-right: 6rem;
+        width: 132px;
+        top: -3rem;
+    }
+    .event-section .site-btn {
+        position: relative;
+       
+    }
+    .event-section {
+        background: #dd3e3e;
+        padding: 14px 0;
+    }
+.hero-content{
+    position:relative;
+}
+
+.hero-section:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.4;
+}
+
+.hero-section {
+    height: 690px;
+    position: relative;
+}
+
+.main-menu {
+    display: inline-block;
+    float: right;
+    padding-top: 5px;
+    margin-right: 68px;
+}
+
+.hero-section .hero-content h2 {
+    font-size: 70px;
+    font-weight: 700;
+  
+    margin-bottom: 20px;
+}
+
+.counter-item1 {
+    padding: 15px 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    border-right: 1px solid #e05252;
+    text-align: center;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 767px) and (max-width: 479px) {
+    .event-info {
+        margin-bottom: 0px !important;
+    }
+    .hero-section {
+        height: 391px;
+        position: relative;
+    }
+    .event-info p {
+        color: #fff;
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+.counter-top.topheader1 {
+  display: inline;
+  flex-wrap: nowrap;
+}
+.counter1t {
+    top: 1rem;
+    position: relative;
+    margin: -6px 6px;
+}
+.topheader.col-xs-12 {
+    position: relative;
+    margin-right: 9rem;
+    top: 2rem;
+  }
+
+  .counter-top .top-readmore {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dd3e3e;
+    top: -9px;
+    position: relative;
+}
+.site-btn.sb-light-line {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    /* letter-spacing: 2px; */
+    /* padding: 22px; */
+    padding: 6px;
+    /* margin-top: 20px; */
+    float: right;
+    margin-right: 6rem;
+    width: 132px;
+    top: -1rem;
+}
+
+.container.event {
+    padding-top: 4rem;
+}
+  }
+
+.counter1{
+  display: flex;
+  margin: 0 20px;
+}
+
+
+
+#hd,#hh,#hm,#hs{
+  color: white;
+}  
+
+
+
+
+.slider-one,
+.slider-two,
+.slider-three,
+.slider-four {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slider-one 12s linear infinite;
+}
+.slider-one .slider-one-image,
+.slider-one .slider-two-image,
+.slider-one .slider-three-image,
+.slider-one .slider-four-image,
+.slider-two .slider-one-image,
+.slider-two .slider-two-image,
+.slider-two .slider-three-image,
+.slider-two .slider-four-image,
+.slider-three .slider-one-image,
+.slider-three .slider-two-image,
+.slider-three .slider-three-image,
+.slider-three .slider-four-image,
+.slider-four .slider-one-image,
+.slider-four .slider-two-image,
+.slider-four .slider-three-image,
+.slider-four .slider-four-image {
+  width: 110%;
+  height: 100%;
+  background-image: url("../uploads/309321561_460708729419350_8061883825852105870_n_1.jpg"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: zoom-out 3s linear infinite;
+}
+.slider-one .slider-one-image .slider-text,
+.slider-one .slider-two-image .slider-text,
+.slider-one .slider-three-image .slider-text,
+.slider-one .slider-four-image .slider-text,
+.slider-two .slider-one-image .slider-text,
+.slider-two .slider-two-image .slider-text,
+.slider-two .slider-three-image .slider-text,
+.slider-two .slider-four-image .slider-text,
+.slider-three .slider-one-image .slider-text,
+.slider-three .slider-two-image .slider-text,
+.slider-three .slider-three-image .slider-text,
+.slider-three .slider-four-image .slider-text,
+.slider-four .slider-one-image .slider-text,
+.slider-four .slider-two-image .slider-text,
+.slider-four .slider-three-image .slider-text,
+.slider-four .slider-four-image .slider-text {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  color: #ffffff;
+  width: 600px;
+  text-transform: capitalize;
+  animation: text-up 12s linear infinite;
+  transform: translateY(100px);
+  animation-delay: 0s;
+}
+.slider-one .slider-one-image .slider-text h1,
+.slider-one .slider-two-image .slider-text h1,
+.slider-one .slider-three-image .slider-text h1,
+.slider-one .slider-four-image .slider-text h1,
+.slider-two .slider-one-image .slider-text h1,
+.slider-two .slider-two-image .slider-text h1,
+.slider-two .slider-three-image .slider-text h1,
+.slider-two .slider-four-image .slider-text h1,
+.slider-three .slider-one-image .slider-text h1,
+.slider-three .slider-two-image .slider-text h1,
+.slider-three .slider-three-image .slider-text h1,
+.slider-three .slider-four-image .slider-text h1,
+.slider-four .slider-one-image .slider-text h1,
+.slider-four .slider-two-image .slider-text h1,
+.slider-four .slider-three-image .slider-text h1,
+.slider-four .slider-four-image .slider-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+   
+    filter: drop-shadow(2px 4px 6px blue);
+}
+.slider-one .slider-one-image .slider-text p,
+.slider-one .slider-two-image .slider-text p,
+.slider-one .slider-three-image .slider-text p,
+.slider-one .slider-four-image .slider-text p,
+.slider-two .slider-one-image .slider-text p,
+.slider-two .slider-two-image .slider-text p,
+.slider-two .slider-three-image .slider-text p,
+.slider-two .slider-four-image .slider-text p,
+.slider-three .slider-one-image .slider-text p,
+.slider-three .slider-two-image .slider-text p,
+.slider-three .slider-three-image .slider-text p,
+.slider-three .slider-four-image .slider-text p,
+.slider-four .slider-one-image .slider-text p,
+.slider-four .slider-two-image .slider-text p,
+.slider-four .slider-three-image .slider-text p,
+.slider-four .slider-four-image .slider-text p {
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.slider-two {
+  animation: slider-two 12s linear infinite;
+}
+.slider-two .slider-two-image {
+  background-image: url("../uploads/David-2023-theme_aYskm8U.jpg");
+}
+.slider-two .slider-two-image .slider-text {
+  animation-delay: 3s;
+}
+
+.slider-three {
+  animation: slider-three 12s linear infinite;
+}
+.slider-three .slider-three-image {
+  background-image: url("../uploads/D_IvuvyyQ.jpg");
+}
+.slider-three .slider-three-image .slider-text {
+  animation-delay: 6s;
+}
+
+.slider-four {
+  animation: slider-four 12s linear infinite;
+}
+.slider-four .slider-four-image {
+  background-image: url("../uploads/G.jpg");
+}
+.slider-four .slider-four-image .slider-text {
+  animation-delay: 9s;
+}
+
+@keyframes text-up {
+  10% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes zoom-out {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes slider-one {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  75% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes slider-two {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+  75% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes slider-three {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  75% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes slider-four {
+  0% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  75% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.team {
+    background: #f5f5f5;
+     
+}
+{% comment %} .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+} {% endcomment %}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+h3.title {
+    color: #faad81;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 600;
+    font-style: italic;
+}
+.team-grid {
+    text-align: center;
+}
+  .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+} 
+/*-- Team --*/
+
+.team {
+    background: #f5f5f5;
+    
+}
+
+.team-grid {
+    text-align: center;
+}
+
+.team-grid h4 {
+    font-size: 25px;
+    color: #000;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+.team-grid h3 {
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    margin: 5px 0 17px;
+}
+.team-grid p {
+    color: #777;
+    font-size: 1em;
+}
+
+.social-nav li {
+    display: inline-block;
+}
+
+.social-nav a {
+    display: inline-block;
+    float: none;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    background: #000;
+    position: relative;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.model-3d-0 a {
+    background: #5C5B5B;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.model-3d-0 .front,
+.model-3d-0 .back {
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    color: #fff;
+    background: #faad81;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateZ(18px);
+    -moz-transform: translateZ(18px);
+    -ms-transform: translateZ(18px);
+    -o-transform: translateZ(18px);
+    transform: translateZ(18px);
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+    -o-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.model-3d-0 .back {
+    font-size: 1em;
+    color: #fff;
+    -webkit-transform: rotateX(90deg) translateZ(18px);
+    -moz-transform: rotateX(90deg) translateZ(18px);
+    -ms-transform: rotateX(90deg) translateZ(18px);
+    -o-transform: rotateX(90deg) translateZ(18px);
+    transform: rotateX(90deg) translateZ(18px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.twitter .back,
+.facebook .back,
+.instagram .back,
+.pinterest .back {
+    background: #81cdfa;
+}
+
+.model-3d-0 a:hover {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+.model-3d-0 a:hover .back {
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+    -o-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.stack img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border: 10px solid #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.stack:last-of-type {
+    margin-right: 0;
+}
+
+/* Third stack example (One stack element rotated in the opposite direction) */
+
+.stack.twisted:before {
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+}
+
+.stack.twisted:after {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+}
+
+/* Reset all rotations on hover */
+
+.stack:hover:before,
+.stack:hover:after,
+.team-grid:hover .stack:before,
+.team-grid:hover .stack:after {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+}
+
+/* Stacks creted by the use of generated content */
+
+.stack:before,
+.stack:after {
+    content: "";
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 10px solid #fff;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.3s all ease-out;
+    -moz-transition: 0.3s all ease-out;
+    transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    -ms-transition: 0.3s all ease-out;
+}
+
+.stack:before {
+    top: 4px;
+    z-index: -10;
+}
+
+/* 1st element in stack (behind image) */
+
+.stack:after {
+    top: 8px;
+    z-index: -20;
+}
+
+/* 2nd element in stack (behind image) */
+
+.stack {
+    float: none;
+    width: 92%;
+    margin: 3% 0% 8% 4%;
+    position: relative;
+    z-index: 1;
+}
+
+#event-date{
+    display:none;
+}
+
+    </style>
+    <section class="hero-section set-bg">
+        <div class="slider-one">
+            <div class="slider-one-image">
+                <div class="slider-text">
+                    <h1>Welcome to FAITH Foundation</h1>
+                    <p>
+                        Faith Foundation is a part of FAITH, it is a registered charitable Trust established to help widows and orphans. Faith Foundation is helping widows and orphans since 1998.
+                        Faith Foundation organizes free Medical Check-up camps during Lent period for underprivileged people.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-two">
+            <div class="slider-two-image">
+                <div class="slider-text">
+                    <h1>David : A Musical Play</h1>
+                    <p>
+                        King David is one of the most well-known figures in Jewish history. His life was filled with much happiness and much pain.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-three">
+            <div class="slider-three-image">
+                <div class="slider-text">
+                    <h1>Medical Camp</h1>
+                    <p>
+                        'Truly I tell you, whatever you did for one of the least of these brothers and sisters of mine, you did for me." Mathews 25:40
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-four">
+            <div class="slider-four-image">
+                <div class="slider-text">
+                    <h1>Joseph - A Musical Play in english</h1>
+                    <p>
+                        Through all the trails and temptations the dreamer never left trusting in God's plan,
+                        the power of forgiveness survived the entire nation and raised Joseph on above all and Finally DREAMS DO COME TRUE!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% for landing in landing_event %}
+        <section class="event-section">
+            <div class="container event">
+                <div class="row">
+                    <div class="col-md-5 col-lg-5 col-xs-12">
+                        <div class="event-info">
+                            <div class="event-date">
+                                <label id="event-date" >{{ landing.date| date:"M d, Y H:m:s" }}</label>
+                                <h2>{{ landing.date | date:"d" }}</h2>
+                                {{ landing.date | date:"M" }}
+                            </div>
+                            <h3>{{ landing.title }}</h3>
+                            <p>
+                                <i class="fa fa-calendar"></i>{{ landing.date }}<i class="fa fa-map-marker"></i> {{ landing.description }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-7 col-xs-12">
+                        <div class="counter1">
+                            <div class="counter-item1">
+                                <h4 id="hd"></h4>
+                                Days
+                            </div>
+                            <div class="counter-item1">
+                                <h4 id="hh"></h4>
+                                hours
+                            </div>
+                            <div class="counter-item1">
+                                <h4 id="hm"></h4>
+                                Mins
+                            </div>
+                            <div class="counter-item1">
+                                <h4 id="hs"></h4>
+                                secs
+                            </div>
+                        </div>
+                        <a href="{% url 'event-registration' %}" class="site-btn sb-light-line">Register</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    <section class="about-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 about-content">
+                    <h2>Nasrapur Spiritual Camp</h2>
+                    <p>Nasrapur, this year (2022) will be conducted on 26th - 29th May.</p>
+                    <p>
+                        Every year FAITH conducts Spiritual Camps in the village of Nasrapur twice a year.
+                        These camps last about 3 days long,
+                    </br>
+                        and for a small fee you can get to experience living and staying among the FAITH prayer partners.
+                        There will be food service and a rooms included. This is a fun place for children and a spiritually educational place for adults to help them grow in Christ and build their foundation stronger.
+                        On the last day we also conduct short skits, by dividing the youth into small groups and a small competition is created.
+                        The winner of this competition also receives prizes.
+                    </p>
+                    <a href="#" class="site-btn sb-wide">join with us</a>
+                </div>
+                <div class="col-md-6 about-img">
+                    <img src="../uploads/Image1.jpg" height="" width="" alt=""/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="team" id="team">
+        <div class="container">
+            <h3 class="title">Our Trustees</h3>
+            <div class="team-grids">
+                <div class="col-xs-4 team-grid">
+                    <div class="pic">
+                        <div class="stack twisted">
+                            <img src="../uploads/imagetrust1.jpg" alt=" " height="" width="" class="img-responsive" />
+                        </div>
+                    </div>
+                    <h4>Sis. Sujata Milind Jadhav</h4>
+                    <h3>+91-9637119350</h3>
+                </div>
+                <div class="col-xs-4 team-grid">
+                    <div class="pic">
+                        <div class="stack twisted">
+                            <img src="../uploads/image_1.jpg" alt=" " height="" width="" class="img-responsive" />
+                        </div>
+                    </div>
+                    <h4>Sis. Beena Timothy Shirole</h4>
+                    <h3>+91-9637119350</h3>
+                </div>
+                <div class="col-xs-4 team-grid">
+                    <div class="pic">
+                        <div class="stack twisted">
+                            <img src="../uploads/IMG-20230131-WA00002.jpg"
+                                 alt=" " height="" width=""
+                                 class="img-responsive" />
+                        </div>
+                    </div>
+                    <h4>Sis. Doreen Rosario</h4>
+                    <h3>+91-9637119350</h3>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    const eventBox = document.getElementById('event-date')
+    console.log(eventBox.textContent)
+    const eventDate = Date.parse(eventBox.textContent)
+     
+    
+    setInterval(()=>{
+        const now = new Date().getTime()
+         
+        const diff = eventDate - now
+       
+    
+        const d = Math.floor(eventDate / (1000 * 60 * 60 * 24) - (now / (1000 * 60 * 60 * 24)))
+   
+        const h = Math.floor((eventDate / (1000 * 60 * 60) - (now / (1000 * 60 * 60))) % 24)
+        console.log(h)
+        const m = Math.floor((eventDate / (1000 * 60) - (now / (1000 * 60))) % 60)
+   
+       const s = Math.floor((eventDate / (1000) - (now / (1000))) % 60)
+      
+    
+       if (diff>0){
+    
+        document.getElementById('hd').innerHTML = d
+        document.getElementById('hh').innerHTML = h
+        document.getElementById('hm').innerHTML = m
+        document.getElementById('hs').innerHTML = s
+
+    }
+    else
+    {
+       
+    }
+    }, 1000)
+    </script>
+{% endblock content %}

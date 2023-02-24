@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+<style>
+  @media only screen and (max-width: 767px) and (max-width: 479px) {
+    .event-info {
+        margin-bottom: 0px !important;
+    }
+    .hero-section {
+        height: 391px;
+        position: relative;
+    }
+    .event-info p {
+        color: #fff;
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+.counter-top.topheader1 {
+  display: inline;
+  flex-wrap: nowrap;
+}
+.counter1t {
+    top: 1rem;
+    position: relative;
+    margin: -6px 6px;
+}
+.topheader.col-xs-12 {
+    position: relative;
+    margin-right: 9rem;
+    top: 2rem;
+  }
+
+  .counter-top .top-readmore {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dd3e3e;
+    top: -9px;
+    position: relative;
+}
+.site-btn.sb-light-line {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    /* letter-spacing: 2px; */
+    /* padding: 22px; */
+    padding: 6px;
+    /* margin-top: 20px; */
+    float: right;
+    margin-right: 6rem;
+    width: 132px;
+    top: -1rem;
+}
+
+.container.event {
+    padding-top: 4rem;
+}
+  }
+
+</style>
+
+
+ <!--added by vincent-->
+ {% for event in banner_list %}
+ <section class="page-info-section set-bg"
+          data-setbg="{{ event.banner_image.url }}">
+   <div class="page-info-content">
+     <div class="pi-inner">
+       <div class="container">
+         <h2>About Us</h2>
+         <div class="site-breadcrumb">
+           <a href="#">Home</a> <i class="fa fa-angle-right"></i>
+           <span>About Us</span>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+{% endfor %}
+
+
+<div class="container-xxl py-5">
+  <div class="container">
+      <div class="row g-5 align-items-center">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              
+              <img class="img-fluid" src="/uploads/about-img.jpg" alt="">
+              
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="h-100">
+                  <h1 class="display-6">About Us</h1>
+                                      
+                  <p class="text-primary fs-5 mb-4"> FAITH - FORSAKING ALL I TAKE HIM</p>
+                  <p>FAITH COMES BY HEARING &amp; HEARING BY THE WORD OF GOD. - Rom. 10:17
+                      <span></span></p><p>Br Noel Vanhaltren formed FAITH group a purely evangelistic group &amp; have been actively involved in ministry since 1985. The ministry was named FAITH abbreviation for "Forsaking All I Take Him". Br Noel, tours around various places in India and abroad to do the Lord's Ministry. He gets invited to numerous countries including USA, Canada, South America, Europe, the Middle East, South East Asia &amp; China.</p>
+                  <p></p>
+                  <p class="text-primary fs-5 mb-4">Our policy</p>
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="fa-solid fa-check text-primary fw-bold" style="margin-right:10px;"></i>
+                      <span>We do not accept nor do we give money to do the Lord's Ministry.</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="fa-solid fa-check text-primary fw-bold" style="margin-right:10px;"></i>
+                      <span>Everybody should attend his/her own Church regularly.</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="fa-solid fa-check text-primary fw-bold" style="margin-right:10px;"></i>
+                      <span>We do not form any Church, nor plan to form a Church</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                       <i class="fa-solid fa-check text-primary fw-bold" style="margin-right:10px;"></i>
+                      <span>Our ministry is to help Christians grow spiritually</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                      <i class="fa-solid fa-check text-primary fw-bold" style="margin-right:10px;"></i>
+                      <span>We do not Baptize anyone</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+ 
+    <section class="services-section spad">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-4">
+    <div class="service-box">
+    <h4><i class="fa fa-fire"></i>Our Values</h4>
+    <p>Excepteur sint occaecat cupidatat non, <br> sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
+    <a href="#" class="s-readmore">Readmore <i class="fa fa-angle-double-right"></i></a>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div class="service-box">
+    <h4><i class="fa fa-eye"></i>Our Vision</h4>
+    <p>Excepteur sint occaecat cupidatat non, <br> sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
+    <a href="#" class="s-readmore">Readmore <i class="fa fa-angle-double-right"></i></a>
+    </div>
+    </div>
+    <div class="col-sm-4">
+    <div class="service-box">
+    <h4><i class="fa fa-heart"></i>Our Mission</h4>
+    <p>Excepteur sint occaecat cupidatat non, <br> sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
+    <a href="#" class="s-readmore">Readmore <i class="fa fa-angle-double-right"></i></a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+{% endblock content %}
