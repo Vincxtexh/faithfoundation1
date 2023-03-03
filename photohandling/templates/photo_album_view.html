@@ -52,6 +52,11 @@
 
 
 @media only screen and (max-width: 767px) and (max-width: 479px) {
+
+
+    .col-xs-12.col-sm-9.col-md-9.col-lg-9.count {
+    top: -3rem;
+}
   .event-info {
       margin-bottom: 0px !important;
   }
@@ -77,8 +82,8 @@ flex-wrap: nowrap;
 }
 .topheader.col-xs-12 {
   position: relative;
-  margin-right: 9rem;
-  top: 2rem;
+  margin-right: 1rem !important;
+  top: 2rem !important;
 }
 
 .counter-top .top-readmore {
@@ -117,7 +122,7 @@ flex-wrap: nowrap;
   box-sizing: border-box;
 }
 
- 
+
 
 .cards {
   display: grid;
@@ -131,13 +136,13 @@ flex-wrap: nowrap;
 .card {
   position: relative;
   display: block;
-  height: 100%;  
+  height: 100%;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
 }
 
-.card__image {      
+.card__image {
   width: 100%;
   height: auto;
 }
@@ -147,9 +152,9 @@ flex-wrap: nowrap;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
-  background-color: var(--surface-color);      
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
 }
@@ -164,7 +169,7 @@ flex-wrap: nowrap;
   align-items: center;
   gap: 2em;
   padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
   background-color: var(--surface-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
@@ -175,14 +180,14 @@ flex-wrap: nowrap;
   height: 80px;
   position: absolute;
   bottom: 100%;
-  right: 0;      
+  right: 0;
   z-index: 1;
 }
 
 .card__arc path {
   fill: var(--surface-color);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}       
+}
 
 .card:hover .card__header {
   transform: translateY(0);
@@ -191,8 +196,8 @@ flex-wrap: nowrap;
 .card__thumb {
   flex-shrink: 0;
   width: 50px;
-  height: 50px;      
-  border-radius: 50%;      
+  height: 50px;
+  border-radius: 50%;
 }
 
 .card__title {
@@ -204,9 +209,9 @@ flex-wrap: nowrap;
 .card__tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
+  font-family: "MockFlowFont";
+  font-size: .8em;
+  color: #D7BDCA;
 }
 
 .card__status {
@@ -218,12 +223,12 @@ flex-wrap: nowrap;
   padding: 0 2em 2em;
   margin: 0;
   color: #D7BDCA;
-  font-family: "MockFlowFont";   
+  font-family: "MockFlowFont";
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}    
+}
 
 .spad {
     padding: 15px 0;
@@ -266,6 +271,30 @@ h4 {
   font-size: 16px;
   /* line-height: 2px; */
 }
+
+#primary2 .hentry {
+    float: left;
+    margin: 0 10px 20px;
+    padding: 3px 3px 20px;
+    width: 214px;
+    border: 0px solid #ddd !important;
+    box-sizing: content-box;
+        top: 1rem;
+    position: relative;
+}
+
+#sidebar1 {
+    color: #666666;
+    float: left;
+   margin: -39px -4px 0 0 !important;
+    text-shadow: 0 1px 0 #FFFFFF;
+    width: 190px;
+    /* line-height: 32px; */
+}
+#sidebar1 .widget ul li {
+    line-height: 0px;
+    padding: 0px 0 3px 0 !important;
+}
   </style>
   <head>
     <meta charset="utf-8">
@@ -277,97 +306,8 @@ h4 {
           href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="../photohandling/assets/photoalbum.css">
   </head>
-  <!--added by vincent-->
-  {% for event in banner_list %}
-    <section class="page-info-section set-bg"
-             data-setbg="{{ event.banner_image.url }}">
-      <div class="page-info-content">
-        <div class="pi-inner">
-          <div class="container">
-            <h2>Photo Album</h2>
-            <div class="site-breadcrumb">
-              <a href="#">Home</a> <i class="fa fa-angle-right"></i>
-              <span>Photos</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endfor %}
 
-  {% comment %} <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-3">
-  
-        <div class="card">
-          <div class="card-header">
-            Categories
-          </div>
-  
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <a href="/gallery/">All</a>
-            </li>
-              
-              <li class="list-group-item">
-                  <a href="/gallery/?category=Joseph - 2022">Joseph - 2022</a>
-              </li>
-              
-              <li class="list-group-item">
-                  <a href="/gallery/?category=Medical Camp - 2021">Medical Camp - 2021</a>
-              </li>
-              
-              <li class="list-group-item">
-                  <a href="/gallery/?category=Samson - 2019">Samson - 2019</a>
-              </li>
-              
-          </ul>
-        </div>
-  
-      </div>
-  
-      <div class="col-md-9 mt-2">
-          <div class="row">
-              
-              <div class="col-md-4">
-                <div class="card">
-                 <img class="image-thumbnail" src="/uploads/A.jpg" alt="Card image cap">
-  
-                  <div class="card-body">
-                    <small class="card-text">Joseph - 2022</small>
-                  </div>
-                    <a href="{% url 'joseph' %}" class="btn btn-outline-primary btn-sm m-1">View</a>
-              </div>
-          </div>
-              
-              <div class="col-md-4">
-                <div class="card">
-                 <img class="image-thumbnail" src="/uploads/A_rfeN5HH.jpg" alt="Card image cap">
-  
-                  <div class="card-body">
-                    <small class="card-text">Medical Camp - 2021</small>
-                  </div>
-                    <a href="/photo/2/" class="btn btn-outline-primary btn-sm m-1">View</a>
-              </div>
-          </div>
-              
-              <div class="col-md-4">
-                <div class="card">
-                 <img class="image-thumbnail" src="/uploads/A_j8EbTAF.jpg" alt="Card image cap">
-  
-                  <div class="card-body">
-                    <small class="card-text">Samson - 2019</small>
-                  </div>
-                    <a href="/photo/4/" class="btn btn-outline-primary btn-sm m-1">View</a>
-              </div>
-          </div>
-              
-        </div>
-  
-  
-      </div>
-    </div>
-  </div> {% endcomment %}
+
 
 
   <div class="page-wrapper bg-dark p-t-100 p-b-50"
@@ -378,15 +318,45 @@ h4 {
         <div id="content" class="clearfix">
           <div id="primary2">
             <h1 class="template-head">Photo Album</h1>
-            <div style="padding:0 0 15px 15px;font-size:13px;font-weight:bold;"></div>
-             
+            <div style="padding:0 0 15px 15px;font-size:13px;font-weight:bold;">
+
+
+                  <div class="aside" id="sidebar1">
+              <div class="otw-sidebar otw-sidebar-5 otw-sidebar-vertical">
+                <div id="lc_taxonomy-15"
+                     class="widget widget otw-widget-1 widget-first widget_lc_taxonomy">
+                  <div id="lct-widget-lab-container" class="list-custom-taxonomy-widget">
+                    <h3 class="widgettitle">
+                      Album Category
+                    </h3>
+                    <ul id="lct-widget-lab">
+                      <li class="cat-item">
+                        <a href="https://www.bestjquery.com/lab/hover-effects/" title="&nbsp;">Passion Of Christ</a>
+                      </li>
+                      <li class="cat-item">
+                        <a href="https://www.bestjquery.com/lab/preloader/" title="&nbsp;">Joseph</a>
+                      </li>
+
+                      <li class="cat-item">
+                        <a href="https://www.bestjquery.com/lab/breadcrumb-style/">Medical Camp </a>
+                      </li>
+                      <li class="cat-item">
+                        <a href="https://www.bestjquery.com/lab/breadcrumb-style/">Samson </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
             {% for objalbum_1 in album_list_1 %}
               <div id="post-39742"
                    class="codelab type-codelab status-publish has-post-thumbnail hentry lab-vertical-tab cssframework-bootstrap">
                 <div class="entry-content">
                   <a target="_blank"
                      href="#"
-                     title="Bootstrap Vertical Tab 71"> 
+                     title="Bootstrap Vertical Tab 71">
                     <img width="214"
                          height="202"
                          src="{{ objalbum_1.album_cover }}"
@@ -398,7 +368,7 @@ h4 {
                 </div>
                 <div class="entry-header">
                   <div class="extlink1 clearfix">
-                    <a 
+                    <a
                        href="{% url 'joseph' %}">View Photos</a>
                   </div>
                   <div class="theme-title">
@@ -418,7 +388,7 @@ h4 {
                 <div class="entry-content">
                   <a target="_blank"
                      href="#"
-                     title="Bootstrap Vertical Tab 71"> 
+                     title="Bootstrap Vertical Tab 71">
                     <img width="214"
                          height="202"
                          src="{{ album_1.album_cover.url }}"
@@ -451,7 +421,7 @@ h4 {
                 <div class="entry-content">
                   <a target="_blank"
                      href="#"
-                     title="Bootstrap Vertical Tab 71"> 
+                     title="Bootstrap Vertical Tab 71">
                     <img width="214"
                          height="202"
                          src="{{ album_1.album_cover.url }}"
@@ -484,7 +454,7 @@ h4 {
                 <div class="entry-content">
                   <a target="_blank"
                      href="#"
-                     title="Bootstrap Vertical Tab 71"> 
+                     title="Bootstrap Vertical Tab 71">
                     <img width="214"
                          height="202"
                          src="{{ album_1.album_cover.url }}"
@@ -510,114 +480,15 @@ h4 {
                 </div>
               </div>
               {% endfor %}
-              
+
             </div>
-            <div class="aside" id="sidebar1">
-              <div class="otw-sidebar otw-sidebar-5 otw-sidebar-vertical">
-                <div id="lc_taxonomy-15"
-                     class="widget widget otw-widget-1 widget-first widget_lc_taxonomy">
-                  <div id="lct-widget-lab-container" class="list-custom-taxonomy-widget">
-                    <h3 class="widgettitle">
-                      Album Category
-                    </h3>
-                    <ul id="lct-widget-lab">
-                      <li class="cat-item">
-                        <a href="https://www.bestjquery.com/lab/hover-effects/" title="&nbsp;">Passion Of Christ</a> 
-                      </li>
-                      <li class="cat-item">
-                        <a href="https://www.bestjquery.com/lab/preloader/" title="&nbsp;">Joseph</a> 
-                      </li>
-                      
-                      <li class="cat-item">
-                        <a href="https://www.bestjquery.com/lab/breadcrumb-style/">Medical Camp </a> 
-                      </li>
-                      <li class="cat-item">
-                        <a href="https://www.bestjquery.com/lab/breadcrumb-style/">Samson </a> 
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-           
-           
-        {% comment %} <section class="pastors-section spad">
-          <div class="container">
-            <div class="section-title">
-              <h2>
-                Photo Album
-              </h2>
-              <p>
-                Test description
-              </p>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <div class="pastor">
-                  {% for album_1 in album_list_1 %}
-                    <img class="pastor-img set-bg" src="{{ album_1.album_cover.url }}">
-                  </img>
-                  <h3>
-                    {{ album_1.album_name }}
-                  </h3>
-                  <p>
-                    {{ album_1.album_date | date:"M, Y" }}
-                  </p>
-                  <a href="{% url 'joseph' %}">See more</a>
-                </div>
-              </div>
-            {% endfor %}
-            {% for album_2 in album_list_2 %}
-              <div class="col-sm-6 col-md-3">
-                <div class="pastor">
-                  <div class="pastor-img set-bg" data-setbg="{{ album_2.album_cover.url }}">
-                  </div>
-                  <h3>
-                    {{ album_2.album_name }}
-                  </h3>
-                  <p>
-                    {{ album_2.album_date | date:"M, Y" }}
-                  </p>
-                  <a href="{% url 'photos' %}">See more</a>
-                </div>
-              </div>
-            {% endfor %}
-            {% for album_3 in album_list_3 %}
-              <div class="col-sm-6 col-md-3">
-                <div class="pastor">
-                  <div class="pastor-img set-bg" data-setbg="{{ album_3.album_cover.url }}">
-                  </div>
-                  <h3>
-                    {{ album_3.album_name }}
-                  </h3>
-                  <p>
-                    {{ album_3.album_date | date:"M, Y" }}
-                  </p>
-                  <a href="{% url 'photos' %}">See more</a>
-                </div>
-              </div>
-            {% endfor %}
-            {% for album_4 in album_list_4 %}
-              <div class="col-sm-6 col-md-3">
-                <div class="pastor">
-                  <div class="pastor-img set-bg" data-setbg="{{ album_4.album_cover.url }}">
-                  </div>
-                  <h3>
-                    {{ album_4.album_name }}
-                  </h3>
-                  <p>
-                    {{ album_4.album_date | date:"M, Y" }}
-                  </p>
-                  <a href="{% url 'photos' %}">See more</a>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </section> {% endcomment %}
+
+
+
+
     </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-     
+
     {% endblock content %}

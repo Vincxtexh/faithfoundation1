@@ -1,4 +1,4 @@
-Activate Virtual Envoirnment before starting project: env/scripts/activate
+Activate Virtual Envoirnment before starting project:   
 
 temp_superuser: id = faith pass = faith
 
@@ -9,16 +9,16 @@ faithfoundation.git@gmail.com
 
 database:
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'faithfoundation',
-        'USER': 'faithfoundationt',
-        'PASSWORD': '_G.B49s8AmkMps.',
-        'HOST': 'db4free.net',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'faithfoundation',
+#         'USER': 'faithfoundationt',
+#         'PASSWORD': '_G.B49s8AmkMps.',
+#         'HOST': 'db4free.net',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
+# }
 
 DATABASES = {
     'default': {

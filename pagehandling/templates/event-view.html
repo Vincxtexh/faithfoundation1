@@ -27,7 +27,7 @@
 
 #hd,#hh,#hm,#hs{
   color: white;
-}    
+}
 
 
 
@@ -81,7 +81,7 @@ flex-wrap: nowrap;
 }
 .topheader.col-xs-12 {
   position: relative;
-  margin-right: 9rem;
+  margin-right: 7rem;
   top: 2rem;
 }
 
@@ -149,11 +149,25 @@ section.event-section {
   height: 38px;
   /* padding-bottom: 32px; */
 }
+
+
+
+.event-list {
+    top: -4rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 49px;
+}
 }
 
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
- 
+
   a.site-btn.sb-line {
     margin-left: 28rem !important;
     margin-top: -18px;
@@ -176,6 +190,12 @@ section.event-section {
   /* padding-bottom: 32px; */
 }
 
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 }
 
 .spad {
@@ -190,23 +210,10 @@ section.event-section {
   background-color: aliceblue;
   padding: 3px;
 }
+
+
 </style>
-  {% for event in banner_list %}
-    <section class="page-info-section set-bg"
-             data-setbg="{{ event.banner_image.url }}">
-      <div class="page-info-content">
-        <div class="pi-inner">
-          <div class="container">
-            <h2>Event List</h2>
-            <div class="site-breadcrumb">
-              <a href="#">Home</a> <i class="fa fa-angle-right"></i>
-              <span>Event List</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endfor %}
+
   {% for landing in landing_event %}
     <section class="event-section">
       <div class="container">
@@ -215,7 +222,7 @@ section.event-section {
             <div class="event-info">
               <div class="event-date" id="">
                 <label id="event-date" style="display:none"> {{ landing.date| date:"M d, Y H:m:s" }}</label>
-          
+
                 <h2>{{ landing.date | date:"d" }}</h2>
                 {{ landing.date | date:"M" }}
               </div>
@@ -225,10 +232,10 @@ section.event-section {
               </p>
             </div>
           </div>
-         
+
           <div class="col-md-7 col-lg-7 col-sm-12">
-           
-            <div class="counter1"> 
+
+            <div class="counter1">
               <div class="counter-item1">
                 <h4 ID="hd"></h4>
                 Days
@@ -256,7 +263,7 @@ section.event-section {
     <div class="container">
       <div class="section-title title-left">
         <span>Experience God's Presence</span>
-        <h2>Upcoming Events</h2>
+        <h2>Upcoming Events :</h2>
       </div>
       <div class="event-list">
         {% for event in event_list %}
@@ -265,20 +272,18 @@ section.event-section {
             <div class=" col-md-4">
               <div class="el-thubm set-bg" data-setbg="{{ event.event_image.url }}"></div>
             </div>
-           
+
             <div class=" col-md-8">
               <div class="el-content">
                 <div class="el-header">
                   <div class="el-date">
-                 
+
                     <h2>{{ event.event_date | date:"d" }}</h2>
                     {{ event.event_date | date:"M" }}
                   </div>
                   <h3> {{ event.name }}</h3>
                   <div class="el-metas">
-                    <div class="el-meta">
-                      <i class="fa fa-user"></i> Vincent John
-                    </div>
+
                     <div class="el-meta">
                       <i class="fa fa-calendar"></i> {{ event.event_date | date:"M d, Y" }}
                     </div>
@@ -288,47 +293,47 @@ section.event-section {
                   </div>
                 </div>
                 <p>
-                  {{ event.description }}          
+                  {{ event.description }}
                       </p>
-              
+
               </div>
             </div>
-           
+
           </div>
           <a href="{% url 'event-registration' %}" class="site-btn sb-line">Register</a>
         </div>
-      
-        
+
+
         {% endfor %}
       </div>
-   
+
     </div>
   </section>
- 
+
   <script>
- 
+
     const eventBox = document.getElementById('event-date')
     console.log(eventBox.textContent)
     const eventDate = Date.parse(eventBox.textContent)
-     
-    
+
+
     setInterval(()=>{
         const now = new Date().getTime()
-         
+
         const diff = eventDate - now
-       
-    
+
+
         const d = Math.floor(eventDate / (1000 * 60 * 60 * 24) - (now / (1000 * 60 * 60 * 24)))
-   
+
         const h = Math.floor((eventDate / (1000 * 60 * 60) - (now / (1000 * 60 * 60))) % 24)
         console.log(h)
         const m = Math.floor((eventDate / (1000 * 60) - (now / (1000 * 60))) % 60)
-   
+
        const s = Math.floor((eventDate / (1000) - (now / (1000))) % 60)
-      
-    
+
+
        if (diff>0){
-    
+
         document.getElementById('hd').innerHTML = d
         document.getElementById('hh').innerHTML = h
         document.getElementById('hm').innerHTML = m
@@ -337,7 +342,7 @@ section.event-section {
     }
     else
     {
-       
+
     }
     }, 1000)
   </script>

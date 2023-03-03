@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../userhandling/assets/material_ui_reg.css">
     <link rel="stylesheet" href="../userhandling/assets/register.css">
     <style>
- 
+
 
     select#id_date_of_birth_month {
         width: 38%;
@@ -34,13 +34,13 @@
 
     .form-control:focus {
         color: var(--bs-body-color);
-        
+
         border-color: #86b7fe;
         outline: 0;
         box-shadow: 0 0 0 0.1rem rgb(13 110 253 / 25%);
     }
 
-    
+
 .site-btn {
     margin-left: 28px;
     padding: 10px 10px;
@@ -57,7 +57,7 @@
     height: 38px;
     /* padding-bottom: 32px; */
   }
-  
+
   .site-btn.sb-line {
     background-color: #ffffff !important;
     border: 2px solid #dd3e3e !important;
@@ -68,15 +68,15 @@
     width: 100%;
 }
     </style>
-   
+
     {% if form.errors %}
         <p class="alert alert-danger container">There was an error with your form!</p>
         <p class="alert alert-warning container">There was an error with your form!</p>
     {% endif %}
     <div class="" style="background: #0202021a !important;">
         <div class="wrapper wrapper--w900"  >
-   
-         
+
+
         <div class="inner">
             <form action="{% url 'register' %}" method="post">
                 <h3>Registration Form</h3>
@@ -89,7 +89,7 @@
                             {{ form.username |add_class:"form-control"}}
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="form-group">
                     <div class="form-wrapper">
@@ -116,7 +116,7 @@
                             {{ form.date_of_birth |add_class:"form-control"}}
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="form-group">
                     <div class="form-wrapper">
@@ -144,7 +144,7 @@
                             {{ form.address |add_class:"form-control"}}
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="form-group">
                     <div class="form-wrapper">
@@ -179,19 +179,19 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-end">
-                    
+
                     <div class="button-holder">
                         <button type="submit" class="site-btn sb-line" value="Register">Register</button>
                     </div>
                 </div>
-         
+
             </form>
         </div>
     </div>
 </div>
-  
+
     <script>
     document.getElementById("id_username").setAttribute("placeholder", "Jon123");
     document.getElementById("id_first_name").setAttribute("placeholder", "Jon");

@@ -2,9 +2,12 @@
 {% block title %}Faith Foundation{% endblock title %}
 {% block content %}
     {% comment %} <link rel="stylesheet" href="../pagehandling/assets/css/style.css" /> {% endcomment %}
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"/>
     <style>
         .site-logo{
-            margin-left: -9rem;
+            margin-left: 0rem;
         }
 
     .site-btn {
@@ -39,10 +42,10 @@
     }
     .event-section .site-btn {
         position: relative;
-       
+
     }
     .event-section {
-        background: #dd3e3e;
+        background: #1a2d4de8;
         padding: 14px 0;
     }
 .hero-content{
@@ -61,12 +64,12 @@
 }
 
 .hero-section {
-    height: 690px;
+
     position: relative;
 }
 
 .main-menu {
-    display: inline-block;
+    /*display: inline-block;*/
     float: right;
     padding-top: 5px;
     margin-right: 68px;
@@ -75,7 +78,7 @@
 .hero-section .hero-content h2 {
     font-size: 70px;
     font-weight: 700;
-  
+
     margin-bottom: 20px;
 }
 
@@ -84,17 +87,35 @@
     font-size: 12px;
     text-transform: uppercase;
     color: #fff;
-    border-right: 1px solid #e05252;
+    border-right: 1px solid #ffffff;
     text-align: center;
     display: inline-block;
 }
 
+
+/*mobile*/
+
 @media only screen and (max-width: 767px) and (max-width: 479px) {
-    .event-info {
-        margin-bottom: 0px !important;
-    }
+
+
+ .col-md-5.col-lg-5.col-xs-12.mob {
+    top: -3rem;
+}
+   .event-info {
+    margin-bottom: 0px !important;
+    top: -14px;
+    position: relative;
+}
+
+.event-info h3 {
+    padding-top: -1px;
+    margin-bottom: 2px;
+    color: #fff;
+    font-size: 22px;
+    padding: 5px;
+}
     .hero-section {
-        height: 391px;
+        height: 350px;
         position: relative;
     }
     .event-info p {
@@ -115,7 +136,7 @@
 }
 .topheader.col-xs-12 {
     position: relative;
-    margin-right: 9rem;
+    margin-right: 7rem;
     top: 2rem;
   }
 
@@ -123,7 +144,7 @@
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
-    color: #dd3e3e;
+    color: #20b2aa;
     top: -9px;
     position: relative;
 }
@@ -144,291 +165,686 @@
 .container.event {
     padding-top: 4rem;
 }
+
+
+/* banner */
+
+header .item img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+header .item {
+    height: 350px;
+    position: relative;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+header .item {
+    height: 59vh;
+    position: relative;
+}
+
+header .item .cover .header-content {
+    position: relative;
+    padding: 21px;
+    overflow: hidden;
+    height: 14rem;
+}
+
+header .item .cover .header-content {
+    position: relative;
+    padding: 14px;
+    overflow: hidden;
+    top: -146px;
+}
+
+header .item .cover .header-content .line {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border: 6px solid #fff;
+    -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+    clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+
+header .item .cover .header-content h2 {
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+}
+
+header .item .cover .header-content h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0 7px;
+    word-spacing: 3px;
+    color: #fff;
+}
+
+header .item .cover .header-content h4 {
+    font-size: 12px;
+    font-weight: 300;
+    /* line-height: 12px; */
+    color: #fff;
+}
+
+
+
+
+
+header .owl-item.active h1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+header .owl-item.active h2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+header .owl-item.active h4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  animation-delay: 0.3s;
+}
+header .owl-item.active .line {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+  animation-delay: 0.3s;
+}
+header .owl-nav .owl-prev {
+  position: absolute;
+  left: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+header .owl-nav .owl-prev span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+header .owl-nav .owl-prev:focus {
+  outline: 0;
+}
+header .owl-nav .owl-prev:hover {
+  background: #000 !important;
+}
+header .owl-nav .owl-next {
+  position: absolute;
+  right: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+header .owl-nav .owl-next span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+header .owl-nav .owl-next:focus {
+  outline: 0;
+}
+header .owl-nav .owl-next:hover {
+  background: #000 !important;
+}
+header:hover .owl-prev {
+  left: 0px;
+  opacity: 1;
+}
+header:hover .owl-next {
+  right: 0px;
+  opacity: 1;
+}
+
+/*-- Team --*/
+
+.team {
+    background: #f5f5f5;
+
+}
+
+.team-grid {
+    text-align: center;
+}
+
+.team-grid h4 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+ margin: 25px 0 6px;
+}
+.team-grid h3 {
+    font-size: 11px;
+    color: #000;
+    font-weight: 600;
+    margin: 5px 0 9px;
+}
+.team-grid p {
+    color: #777;
+    font-size: 1em;
+}
+
+
+
+
+.event-section {
+    background: #1a2d4de8;
+    padding: 2px 0;
+    height: 224px;
+}
+
+.col-xs-12.col-sm-9.col-md-9.col-lg-9.count {
+    top: -19px;
+    position: relative;
+}
+
+.col-md-7.col-lg-7.col-xs-12.landingevent {
+    top: -5rem;
+}
+
+
+.event-date {
+    display: inline-block;
+    float: left;
+    text-align: center;
+        background: #252525;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 75px;
+    font-size: 13px;
+    margin-right: 14px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    top: -19px;
+    position: relative;
+    z-index: 99999999999;
+}
+
+.counter1 {
+    display: flex;
+    margin: 0 10px;
+}
+
+.event-date h2 {
+    display: block;
+    background: #fff;
+    color: #1a2d4d;
+    padding: 8px 0;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
   }
 
-.counter1{
-  display: flex;
-  margin: 0 20px;
-}
+
+/*mobile  end*/
+
+
 
 
 
 #hd,#hh,#hm,#hs{
   color: white;
-}  
+}
+
 
 
 
-
-.slider-one,
-.slider-two,
-.slider-three,
-.slider-four {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: slider-one 12s linear infinite;
-}
-.slider-one .slider-one-image,
-.slider-one .slider-two-image,
-.slider-one .slider-three-image,
-.slider-one .slider-four-image,
-.slider-two .slider-one-image,
-.slider-two .slider-two-image,
-.slider-two .slider-three-image,
-.slider-two .slider-four-image,
-.slider-three .slider-one-image,
-.slider-three .slider-two-image,
-.slider-three .slider-three-image,
-.slider-three .slider-four-image,
-.slider-four .slider-one-image,
-.slider-four .slider-two-image,
-.slider-four .slider-three-image,
-.slider-four .slider-four-image {
-  width: 110%;
-  height: 100%;
-  background-image: url("../uploads/309321561_460708729419350_8061883825852105870_n_1.jpg"); 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: zoom-out 3s linear infinite;
-}
-.slider-one .slider-one-image .slider-text,
-.slider-one .slider-two-image .slider-text,
-.slider-one .slider-three-image .slider-text,
-.slider-one .slider-four-image .slider-text,
-.slider-two .slider-one-image .slider-text,
-.slider-two .slider-two-image .slider-text,
-.slider-two .slider-three-image .slider-text,
-.slider-two .slider-four-image .slider-text,
-.slider-three .slider-one-image .slider-text,
-.slider-three .slider-two-image .slider-text,
-.slider-three .slider-three-image .slider-text,
-.slider-three .slider-four-image .slider-text,
-.slider-four .slider-one-image .slider-text,
-.slider-four .slider-two-image .slider-text,
-.slider-four .slider-three-image .slider-text,
-.slider-four .slider-four-image .slider-text {
-  position: absolute;
-  top: 40%;
-  left: 5%;
-  color: #ffffff;
-  width: 600px;
-  text-transform: capitalize;
-  animation: text-up 12s linear infinite;
-  transform: translateY(100px);
-  animation-delay: 0s;
-}
-.slider-one .slider-one-image .slider-text h1,
-.slider-one .slider-two-image .slider-text h1,
-.slider-one .slider-three-image .slider-text h1,
-.slider-one .slider-four-image .slider-text h1,
-.slider-two .slider-one-image .slider-text h1,
-.slider-two .slider-two-image .slider-text h1,
-.slider-two .slider-three-image .slider-text h1,
-.slider-two .slider-four-image .slider-text h1,
-.slider-three .slider-one-image .slider-text h1,
-.slider-three .slider-two-image .slider-text h1,
-.slider-three .slider-three-image .slider-text h1,
-.slider-three .slider-four-image .slider-text h1,
-.slider-four .slider-one-image .slider-text h1,
-.slider-four .slider-two-image .slider-text h1,
-.slider-four .slider-three-image .slider-text h1,
-.slider-four .slider-four-image .slider-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-   
-    filter: drop-shadow(2px 4px 6px blue);
-}
-.slider-one .slider-one-image .slider-text p,
-.slider-one .slider-two-image .slider-text p,
-.slider-one .slider-three-image .slider-text p,
-.slider-one .slider-four-image .slider-text p,
-.slider-two .slider-one-image .slider-text p,
-.slider-two .slider-two-image .slider-text p,
-.slider-two .slider-three-image .slider-text p,
-.slider-two .slider-four-image .slider-text p,
-.slider-three .slider-one-image .slider-text p,
-.slider-three .slider-two-image .slider-text p,
-.slider-three .slider-three-image .slider-text p,
-.slider-three .slider-four-image .slider-text p,
-.slider-four .slider-one-image .slider-text p,
-.slider-four .slider-two-image .slider-text p,
-.slider-four .slider-three-image .slider-text p,
-.slider-four .slider-four-image .slider-text p {
-  font-size: 18px;
-  line-height: 28px;
-  color: white;
-  filter: drop-shadow(2px 4px 6px black);
-}
-
-.slider-two {
-  animation: slider-two 12s linear infinite;
-}
-.slider-two .slider-two-image {
-  background-image: url("../uploads/David-2023-theme_aYskm8U.jpg");
-}
-.slider-two .slider-two-image .slider-text {
-  animation-delay: 3s;
-}
-
-.slider-three {
-  animation: slider-three 12s linear infinite;
-}
-.slider-three .slider-three-image {
-  background-image: url("../uploads/D_IvuvyyQ.jpg");
-}
-.slider-three .slider-three-image .slider-text {
-  animation-delay: 6s;
-}
-
-.slider-four {
-  animation: slider-four 12s linear infinite;
-}
-.slider-four .slider-four-image {
-  background-image: url("../uploads/G.jpg");
-}
-.slider-four .slider-four-image .slider-text {
-  animation-delay: 9s;
-}
-
-@keyframes text-up {
-  10% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes zoom-out {
-  100% {
-    width: 100%;
-  }
-}
-@keyframes slider-one {
-  0% {
-    visibility: visible;
-  }
-  25% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
-  75% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-@keyframes slider-two {
-  0% {
-    visibility: hidden;
-  }
-  25% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: visible;
-  }
-  75% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes slider-three {
-  0% {
-    visibility: hidden;
-  }
-  25% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
-  75% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes slider-four {
-  0% {
-    visibility: hidden;
-  }
-  25% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
-  75% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
 
 .team {
     background: #f5f5f5;
-     
+
 }
-{% comment %} .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-} {% endcomment %}
+
+.spad {
+    padding: 25px 0;
+}
+
 
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
+
+
 }
 
+
+
+/* laptop */
+
 @media (min-width: 992px) {
+
+    .counter1{
+  display: flex;
+  margin: 0 20px;
+}
   .container {
     width: 970px;
   }
+header .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  header .item {
+  height: 100vh;
+  position: relative;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+header .item .cover {
+  padding: 75px 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
 }
-h3.title {
-    color: #faad81;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 1em;
-    font-weight: 600;
-    font-style: italic;
-}
-.team-grid {
-    text-align: center;
-}
-  .col-xs-4 {
-    width: 33.33333333%;
-    float: left;
+header .item .cover .header-content {
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-} 
+    padding: 43px;
+    overflow: hidden;
+    top: 11rem;
+    float: left;
+    left: -10rem;
+}
+header .item .cover .header-content .line {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border: 9px solid #fff;
+  -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+  clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+header .item .cover .header-content h2 {
+  font-weight: 300;
+  font-size: 35px;
+  color: #fff;
+}
+header .item .cover .header-content h1 {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 5px 0 20px;
+  word-spacing: 3px;
+  color: #fff;
+}
+header .item .cover .header-content h4 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+  color: #fff;
+}
+
+
+
+
+
+header .owl-item.active h1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+header .owl-item.active h2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+header .owl-item.active h4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  animation-delay: 0.3s;
+}
+header .owl-item.active .line {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+  animation-delay: 0.3s;
+}
+header .owl-nav .owl-prev {
+  position: absolute;
+  left: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+header .owl-nav .owl-prev span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+header .owl-nav .owl-prev:focus {
+  outline: 0;
+}
+header .owl-nav .owl-prev:hover {
+  background: #000 !important;
+}
+header .owl-nav .owl-next {
+  position: absolute;
+  right: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+header .owl-nav .owl-next span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+header .owl-nav .owl-next:focus {
+  outline: 0;
+}
+header .owl-nav .owl-next:hover {
+  background: #000 !important;
+}
+header:hover .owl-prev {
+  left: 0px;
+  opacity: 1;
+}
+header:hover .owl-next {
+  right: 0px;
+  opacity: 1;
+}
+
+.event-date h2 {
+    display: block;
+    background: #fff;
+    color: #1a2d4d;
+    padding: 8px 0;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+}
+
 /*-- Team --*/
 
 .team {
     background: #f5f5f5;
-    
+
+}
+
+.team-grid {
+    text-align: center;
+}
+
+.team-grid h4 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+ margin: 25px 0 6px;
+}
+.team-grid h3 {
+    font-size: 11px;
+    color: #000;
+    font-weight: 600;
+    margin: 5px 0 9px;
+}
+.team-grid p {
+    color: #777;
+    font-size: 1em;
+}
+
+
+/* laptop */
+
+
+
+/* desktop */
+
+@media (min-width: 1200px) {
+
+    .counter1{
+  display: flex;
+  margin: 0 20px;
+}
+  .container {
+    width: 1170px;
+  }
+
+  header .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  header .item {
+  height: 100vh;
+  position: relative;
+}
+
+header .item .cover {
+  padding: 75px 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+header .item .cover .header-content {
+    position: relative;
+    padding: 43px;
+    overflow: hidden;
+    top: 11rem;
+    float: left;
+    left: -10rem;
+}
+header .item .cover .header-content .line {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border: 9px solid #fff;
+  -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+  clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+header .item .cover .header-content h2 {
+  font-weight: 300;
+  font-size: 35px;
+  color: #fff;
+}
+header .item .cover .header-content h1 {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 5px 0 20px;
+  word-spacing: 3px;
+  color: #fff;
+}
+header .item .cover .header-content h4 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+  color: #fff;
+}
+
+
+
+
+
+header .owl-item.active h1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+header .owl-item.active h2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  animation-delay: 0.3s;
+}
+header .owl-item.active h4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  animation-delay: 0.3s;
+}
+header .owl-item.active .line {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+  animation-delay: 0.3s;
+}
+header .owl-nav .owl-prev {
+  position: absolute;
+  left: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+header .owl-nav .owl-prev span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+header .owl-nav .owl-prev:focus {
+  outline: 0;
+}
+header .owl-nav .owl-prev:hover {
+  background: #000 !important;
+}
+header .owl-nav .owl-next {
+  position: absolute;
+  right: 15px;
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  border-radius: 0;
+}
+header .owl-nav .owl-next span {
+  font-size: 1.6875rem;
+  color: #fff;
+}
+header .owl-nav .owl-next:focus {
+  outline: 0;
+}
+header .owl-nav .owl-next:hover {
+  background: #000 !important;
+}
+header:hover .owl-prev {
+  left: 0px;
+  opacity: 1;
+}
+header:hover .owl-next {
+  right: 0px;
+  opacity: 1;
+}
+
+/*-- Team --*/
+
+.team {
+    background: #f5f5f5;
+
 }
 
 .team-grid {
@@ -450,6 +866,38 @@ h3.title {
 .team-grid p {
     color: #777;
     font-size: 1em;
+}
+
+.event-date h2 {
+    display: block;
+    background: #fff;
+    color: #1a2d4d;
+    padding: 8px 0;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* desktop */
+}
+h3.title {
+    color: #6694e3;
+    font-size: 31px;
+    text-align: center;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 4px;
+}
+.team-grid {
+    text-align: center;
+}
+  .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .social-nav li {
@@ -657,56 +1105,78 @@ h3.title {
     display:none;
 }
 
+
+
+.hs-responsive-embed-youtube {
+position: relative;
+padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+padding-top: 25px;
+}
+.hs-responsive-embed-youtube iframe {
+position: absolute;
+width: 100%!important;
+height: 100%!important;
+}
+
+
+
+
     </style>
-    <section class="hero-section set-bg">
-        <div class="slider-one">
-            <div class="slider-one-image">
-                <div class="slider-text">
-                    <h1>Welcome to FAITH Foundation</h1>
-                    <p>
-                        Faith Foundation is a part of FAITH, it is a registered charitable Trust established to help widows and orphans. Faith Foundation is helping widows and orphans since 1998.
-                        Faith Foundation organizes free Medical Check-up camps during Lent period for underprivileged people.
-                    </p>
-                </div>
+
+      <header class="hero-section set-bg">
+
+      <div class="owl-carousel owl-theme" id="owlcarousel">
+        <div class="item">
+          <img src="../uploads/309321561_460708729419350_8061883825852105870_n.jpg"
+               alt="images not found" >
+          <div class="cover">
+            <div class="container">
+              <div class="header-content">
+                <div class="line"></div>
+                <h2>Faith comes by hearing and hearing by the word of God.</h2>
+                <h1>Romans 10:17</h1>
+                <h4>Faith - Forsaking All I Take Him</h4>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="slider-two">
-            <div class="slider-two-image">
-                <div class="slider-text">
-                    <h1>David : A Musical Play</h1>
-                    <p>
-                        King David is one of the most well-known figures in Jewish history. His life was filled with much happiness and much pain.
-                    </p>
-                </div>
+        <div class="item">
+          <img src="../uploads/F_P64CgIQ.jpg"
+               alt="images not found">
+          <div class="cover">
+            <div class="container">
+              <div class="header-content">
+                <div class="line animated bounceInLeft"></div>
+                <h2>“The LORD is my helper; I will not fear. What can man do to me?”</h2>
+                <h1>Hebrews 13:6</h1>
+                <h4>Medical Camp </h4>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="slider-three">
-            <div class="slider-three-image">
-                <div class="slider-text">
-                    <h1>Medical Camp</h1>
-                    <p>
-                        'Truly I tell you, whatever you did for one of the least of these brothers and sisters of mine, you did for me." Mathews 25:40
-                    </p>
-                </div>
+        <div class="item">
+          <img src="../uploads/pic1.jpg"
+               alt="images not found">
+          <div class="cover">
+            <div class="container">
+              <div class="header-content">
+                <div class="line animated bounceInLeft"></div>
+                <h2>My sheep hear My voice, and I know them, and they follow Me.</h2>
+                <h1>John 10:27</h1>
+                <h4>Faith Revival Meeting</h4>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="slider-four">
-            <div class="slider-four-image">
-                <div class="slider-text">
-                    <h1>Joseph - A Musical Play in english</h1>
-                    <p>
-                        Through all the trails and temptations the dreamer never left trusting in God's plan,
-                        the power of forgiveness survived the entire nation and raised Joseph on above all and Finally DREAMS DO COME TRUE!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+
+  </header>
+
     {% for landing in landing_event %}
         <section class="event-section">
             <div class="container event">
                 <div class="row">
-                    <div class="col-md-5 col-lg-5 col-xs-12">
+                    <div class="col-md-5 col-lg-5 col-xs-12 mob">
                         <div class="event-info">
                             <div class="event-date">
                                 <label id="event-date" >{{ landing.date| date:"M d, Y H:m:s" }}</label>
@@ -719,7 +1189,7 @@ h3.title {
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-7 col-lg-7 col-xs-12">
+                    <div class="col-md-7 col-lg-7 col-xs-12 landingevent">
                         <div class="counter1">
                             <div class="counter-item1">
                                 <h4 id="hd"></h4>
@@ -761,9 +1231,12 @@ h3.title {
                     </p>
                     <a href="#" class="site-btn sb-wide">join with us</a>
                 </div>
+
+
                 <div class="col-md-6 about-img">
                     <img src="../uploads/Image1.jpg" height="" width="" alt=""/>
                 </div>
+
             </div>
         </div>
     </section>
@@ -808,25 +1281,25 @@ h3.title {
     const eventBox = document.getElementById('event-date')
     console.log(eventBox.textContent)
     const eventDate = Date.parse(eventBox.textContent)
-     
-    
+
+
     setInterval(()=>{
         const now = new Date().getTime()
-         
+
         const diff = eventDate - now
-       
-    
+
+
         const d = Math.floor(eventDate / (1000 * 60 * 60 * 24) - (now / (1000 * 60 * 60 * 24)))
-   
+
         const h = Math.floor((eventDate / (1000 * 60 * 60) - (now / (1000 * 60 * 60))) % 24)
         console.log(h)
         const m = Math.floor((eventDate / (1000 * 60) - (now / (1000 * 60))) % 60)
-   
+
        const s = Math.floor((eventDate / (1000) - (now / (1000))) % 60)
-      
-    
+
+
        if (diff>0){
-    
+
         document.getElementById('hd').innerHTML = d
         document.getElementById('hh').innerHTML = h
         document.getElementById('hm').innerHTML = m
@@ -835,8 +1308,35 @@ h3.title {
     }
     else
     {
-       
+
     }
     }, 1000)
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+  $('#owlcarousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    nav:true,
+    mouseDrag:false,
+    autoplay:true,
+    animateOut: 'slideOutUp',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+});
+
+</script>
+
 {% endblock content %}

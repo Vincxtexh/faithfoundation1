@@ -16,10 +16,20 @@
   </head>
   <style>
 
+
+#gallery {
+    float: centre;
+    width: 100% !important;
+    /* align-items: center; */
+    /* display: contents; */
+    padding: 14px;
+    padding-top: 0px;
+}
+
     .main {
       float: left;
       font-size: 1.1em;
-       width: 100%; 
+       width: 100%;
       color: #FFF;
       text-shadow: 2px 2px 4px rgb(0 0 0 / 6%);
       font-family: 'Open Sans';
@@ -61,30 +71,48 @@
   background: #dd3e3e;
   letter-spacing: 1px;
   /* text-align: right; */
- 
+
 }
 
-@media (max-width:767px) {
+@media only screen and (max-width: 767px) and (max-width: 479px) {
   .col-md-2 {
     top:5px;
     padding-bottom:25px;
     float:right;
   }
-}
-.col-md-2 {
+
+  .col-md-2 {
   top: 34px; position: relative; margin-left: 30px;
 }
-div#wrap {
 
-  position: absolute;
-  top: 14%;
-  left: 3%;
-  width: 95%;
-  z-index: 2;
-  transform: translate(10px, 10px);
+
+.col-md-6.col-xs-12.col-sm-12.count {
+    float: left;
+    left: -21rem;
+    top: 1rem;
 }
 
-@media (min-width: 576px)
+.col-md-3.col-sm-12.col-xs-12.count {
+    top: -2rem;
+}
+.topheader.col-md-3 {
+    position: relative;
+    float: right;
+    margin-right: 11rem;
+    top: 3rem;
+}
+
+}
+
+div#wrap {
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    width: 95%;
+    z-index: 2;
+    transform: translate(10px, 10px);
+}
+
 .col-sm-12  {
   flex: 0 0 auto;
   width: 100%;
@@ -94,15 +122,42 @@ div#wrap {
   top: -2rem;
   position: relative;
 }
+
+a {
+    color: #1a2d4d;
+    font-size: 1rem;
+}
+
+h1 {
+    padding: 8px;
+    font-size: 1.7rem;
+    color: #1a6c95;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+h2 {
+    font-size: 23px;
+    margin-top: -1rem;
+    margin-left: 1rem;
+    color: #1a2d4d;
+    padding: 5px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: #1a2d4d;
+}
+
 .hero-section:after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #000;
-  opacity: 0.3;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 95%;
+    left: 0;
+    top: 0;
+    background: #98abc3;
+    opacity: 0.3;
 }
 
 .hero-section {
@@ -112,66 +167,93 @@ div#wrap {
   height: 500px;
 }
 
-a {
-  color: snow;
-}
 
-h1 {
-  padding: 12px;
-  font-size: 2rem;
-  color: snow;
-  font-family: sans-serif;
-}
-h2 {
-  font-size: 23px;
-  margin-top: -1rem;
-  margin-left: 2rem;
-  color: snow;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  color: snow;
-}
 
 .main-menu {
-  display: inline-block;
+
   float: right;
   padding-top: 5px;
   margin-right: 3rem !important;
 }
-    
+
+
+
+@media (min-width: 992px) {
+
+
+.topheader.col-md-3 {
+    position: relative;
+    float: left;
+    /* margin-right: -35rem; */
+    top: -1rem;
+    margin-left: 13rem;
+}
+.col-md-6.col-xs-12.col-sm-12.count {
+    margin-left: -46rem;
+}
+
+.counter-top.topheader1 {
+    margin-left: -48rem;
+}
+
+.counter1t {
+    display: flex;
+    margin: -20px 38px;
+}
+}
+
+@media (min-width: 1200px) {
+.topheader.col-md-3 {
+    position: relative;
+    float: left;
+    /* margin-right: -35rem; */
+    top: -1rem;
+    margin-left: 13rem;
+}
+
+.col-md-6.col-xs-12.col-sm-12.count {
+    margin-left: -50rem;
+}
+
+.counter-top.topheader1 {
+    margin-left: -46rem;
+}
+
+.counter1t {
+    display: flex;
+    margin: -20px 38px;
+}
+  }
+
   </style>
-  <div class="photo-gallery"  style="background: #0202021a !important;">
-    
+  <div class="photo-gallery" >
+
       <div class="wrapper wrapper--w900" style="
       top: 1rem;
       position: relative;
       /* padding: 0rem; */ ">
-     <section  class="hero-section set-bg"
-     data-setbg="../uploads/Joeph2022.jpg"    style="filter: blur(6px);"> </section>
+     <section  class="hero-section set-bg" > </section>
         <div class="row" id="wrap">
-        
+
             <div class="col-md-4 col-lg-4 col-sm-12" >
               <a href="{% url 'photo-view' %}" class=""><i class="fa fa-arrow-left"></i>Back to album</a>
-           
+
               {% for photo in photo_list %}
               <h1>JOSEPH ALBUM</h1>
               <h2>{{ photo.photo_date | date:"M, Y" }}</h2>
               <p>
-                >A lightweight image gallery modal window script which
-                > uses only CSS3 for silky-smooth animations and transitions,
-                >utilizes GPU rending, which can be completely controlled
-                > and themed directly from the CSS.
+                    In the Year 2022, We reached out to people by enacting JOSEPH.
+                    Through all the trails and temptations the dreamer never left trusting in God's plan,
+                    the power of forgiveness survived the entire nation and raised Joseph on above all and Finally DREAMS DO COME TRUE!
+
               </p>
             </div>
 
 
 
 
-            
-         
+
+
             <div class="col-md-8 col-lg-8 col-sm-12" style="position: relative;">
               <ul id="gallery">
                 <li class="loaded">
@@ -219,7 +301,7 @@ p {
                     <img src="{{ photo.photo_10.url }}"  title="Joseph - A musical play">
                   </a>
                 </li>
-              
+
                 <li class="loaded">
                   <a href="https://www.facebook.com/plugins/video.php?height=308&href=https%3A%2F%2Fwww.facebook.com%2F100064406813387%2Fvideos%2F1120459682004550%2F&show_text=false&width=700&t=0"    width="800" height="500"    rel="video">
                     <img src="../uploads/Joeph2022.jpg"
@@ -232,7 +314,7 @@ p {
         {% endfor %}
 
       </div>
-    
+
   </div>
   <script>
 	$(document).ready(function () {
